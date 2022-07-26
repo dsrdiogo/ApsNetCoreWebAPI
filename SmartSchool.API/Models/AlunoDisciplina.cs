@@ -1,4 +1,6 @@
-﻿namespace SmartSchool.API.Models
+﻿using System;
+
+namespace SmartSchool.API.Models
 {
     public class AlunoDisciplina
     {
@@ -9,6 +11,12 @@
             AlunoId = alunoId;           
             DisciplinaId = discipliaId;
         }
+
+        public DateTime DataInicio { get; set; }
+
+        public DateTime? DataFim { get; set; } = null;
+
+        public int? Nota { get; set; } = null;
 
         public int AlunoId { get; set; }
 
